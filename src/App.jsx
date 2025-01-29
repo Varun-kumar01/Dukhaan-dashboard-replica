@@ -1,32 +1,14 @@
-import Fotter from "./components/Fotter"
-import Overview from "./components/Overview"
-import Sidebar from "./components/Sidebar"
-import Table from "./components/Table"
-import Topbar from "./components/Topbar"
-import Transactions from "./components/Transactions"
+import React from 'react'
+import { RevenueCard } from './components/RevenueCard.jsx'
+
 
 
 function App() {
-
-  return (
-    <div className="bg-white-50">
-      <Sidebar />
-
-      <div className="border-b border-black-150 sm:pl-64 bg-white-500">
-        <Topbar />
-      </div>
-      
-      <div className=" m-5 mb-0 sm:ml-64 grid gap-8">
-        <Overview />
-        <div className="grid gap-6">
-          <Transactions />
-          <Table />
-        </div>
-        <Fotter/>
-      </div>
-
+  return <div className='grid grid-cols-4'>
+    <div>
+      <RevenueCard title={"Amount pending"} amount={"92,312.00"} orderCount={"13 orders"}></RevenueCard>
     </div>
-  )
+  </div>
 }
 
 export default App
